@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vaultdupe"
+version = "0.1.0"
+description = "Vaultwarden deduplication and Apple Passwords diff"
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = ["tldextract"]
+
+[project.scripts]
+vaultdupe = "vaultdupe.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["vaultdupe"]

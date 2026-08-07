@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-# convenience launcher, runs vaultdupe inside nix-shell
-# BW_SESSION must be exported in the calling environment for fetch and apply
-set -euo pipefail
-cd "$(dirname "$0")"
-if [ $# -eq 0 ]; then
-  exec nix-shell --run "python3 -m vaultdupe --help"
-fi
-exec nix-shell --run "python3 -m vaultdupe $(printf '%q ' "$@")"

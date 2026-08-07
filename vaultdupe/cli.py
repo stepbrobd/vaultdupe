@@ -245,7 +245,7 @@ def cmd_export_apple(ns) -> None:
     print("     Import is an upsert: identical entries no-op, missing ones are added,")
     print("     TOTP seeds attach to their entries. Passkeys are unaffected.")
     print("  2. THE FILE HOLDS PLAINTEXT PASSWORDS. When the import is done, run:")
-    print("     python3 -m vaultdupe shred   (or delete the file securely yourself)")
+    print("     vaultdupe shred   (or delete the file securely yourself)")
 
 
 def cmd_shred(ns) -> None:
@@ -262,7 +262,7 @@ def cmd_shred(ns) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        prog="vd",
+        prog="vaultdupe",
         description="Vaultwarden dedupe and Apple Passwords diff. Secrets are "
         "HMAC-hashed at ingest, plaintext never touches disk.",
     )
