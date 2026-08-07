@@ -1,0 +1,7 @@
+*.csv
+*.pyc
+.hmac-key
+.pytest_cache/
+__pycache__/
+result
+work/
